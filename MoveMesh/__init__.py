@@ -11,7 +11,7 @@ bl_info = {
     "category": "插件的分类 Object",
 }
 import bpy
-from .ops import Test_Ops
+from .ops import Test_Ops, Test_Ops2
 from .ui import Test_Panel
 
 
@@ -30,6 +30,7 @@ class Test_AddonPref(bpy.types.AddonPreferences):
 def register():
     print("上天入地插件 注册~")
     bpy.utils.register_class(Test_Ops)
+    bpy.utils.register_class(Test_Ops2)
     bpy.utils.register_class(Test_Panel)
     bpy.utils.register_class(Test_AddonPref)
 
@@ -39,3 +40,4 @@ def unregister():
     bpy.utils.unregister_class(Test_AddonPref)
     bpy.utils.unregister_class(Test_Panel)
     bpy.utils.unregister_class(Test_Ops)
+    bpy.utils.unregister_class(Test_Ops2)

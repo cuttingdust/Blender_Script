@@ -1,5 +1,5 @@
 import bpy
-from .ops import Test_Ops
+from .ops import Test_Ops, Test_Ops2
 
 
 class Test_Panel(bpy.types.Panel):
@@ -17,3 +17,4 @@ class Test_Panel(bpy.types.Panel):
         layout = self.layout
         col = layout.column()
         col.operator(Test_Ops.bl_idname)
+        col.operator(Test_Ops2.bl_idname)
